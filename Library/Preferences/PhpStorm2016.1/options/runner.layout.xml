@@ -1,0 +1,37 @@
+<application>
+  <component name="RunnerLayoutSettings">
+    <runner id="MySQL - applied_project@localhost">
+      <ViewImpl>
+        <option name="ID" value="Input" />
+        <option name="minimizedInGrid" value="false" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="0" />
+        <option name="window" value="0" />
+      </ViewImpl>
+      <ViewImpl>
+        <option name="ID" value="ResultTab" />
+        <option name="minimizedInGrid" value="false" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="0" />
+        <option name="window" value="0" />
+      </ViewImpl>
+      <TabImpl>
+        <option name="displayName" value="Database Console" />
+      </TabImpl>
+      <General />
+    </runner>
+    <runner id="MySQL - shoedb@localhost">
+      <ViewImpl>
+        <option name="ID" value="Input" />
+        <option name="minimizedInGrid" value="false" />
+        <option name="placeInGrid" value="center" />
+        <option name="tabIndex" value="0" />
+        <option name="window" value="0" />
+      </ViewImpl>
+      <TabImpl>
+        <option name="displayName" value="Database Console" />
+      </TabImpl>
+      <General />
+    </runner>
+  </component>
+</application>
