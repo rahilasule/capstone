@@ -8,11 +8,7 @@
 include_once("adb.php");
 class notification extends adb
 {
-	//constructor for notification class
-	function notification()
-	{
-
-	}
+	
 
 	//adds notification to database
 	function add_notification($msg, $time, $date)

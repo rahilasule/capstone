@@ -193,8 +193,8 @@
 											include("../../application/models/notification.php");
 
 											$obj = new notification();
-											$obj->view_all_notifications();
-											while($row=$obj->fetch()){
+											$data=$obj->view_all_notifications();
+											while($row=$data->fetch_array(MYSQLI_ASSOC)){
 												echo "<tr style='display:block; font-family:Lucida Grande;'><td><h2 style='display:block; color:DarkBlue;'>{$row['message']}</h2> <p style='display:block'><b>{$row['date']}</b>  at {$row['time']}</p></td></tr>";
 											
 											}

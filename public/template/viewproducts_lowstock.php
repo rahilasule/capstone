@@ -197,8 +197,8 @@ session_start(); //add session here to check that employee is logged in
 											include("../../application/models/item.php");
 
 											$obj = new item();
-											$obj->view_lowstock();
-											while($row=$obj->fetch()){
+											$data=$obj->view_lowstock();
+											while($row=$data->fetch_array(MYSQLI_ASSOC)){
 												echo "<tr><td>{$row['item_id']}</td><td>{$row['item_name']}</td><td>{$row['quantity']}</td><td>{$row['price']}</td><td>{$row['reorder_qty']}</td><td><a data-toggle='modal' data-target='#editModal' data-id='{$row['item_id']}' data-item_name='{$row['item_name']}' data-quantity='{$row['quantity']}' data-price='{$row['price']}' data-reorder_qty='{$row['reorder_qty']}' data-description='{$row['description']}'>Edit</a></td></tr>";
 											
 											}

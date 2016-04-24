@@ -125,7 +125,7 @@ session_start(); //add session here to check that employee is logged in
 
 				<!-- Main navigation -->
 				<ul class="navigation">
-					<li><a href="homepage.html"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
+					<li><a href="newsfeed.php"><span>Dashboard</span> <i class="icon-screen2"></i></a></li>
 					<li>
 						<a href="viewsales.php"><span>Sales</span> <i class="icon-stats2"></i></a>
 					</li>
@@ -193,8 +193,8 @@ session_start(); //add session here to check that employee is logged in
 											include("../../application/models/customer.php");
 
 											$obj = new customer();
-											$obj->view_all_customers();
-											while($row=$obj->fetch()){
+											$data=$obj->view_all_customers();
+											while($row=$data->fetch_array(MYSQLI_ASSOC)){
 												echo "<tr><td>{$row['fname']}</td><td>{$row['lname']}</td><td>{$row['email']}</td><td>{$row['phone_number']}</td><td><a data-toggle='modal' data-target='#editModal' data-id='{$row['cid']}' data-fname='{$row['fname']}' data-lname='{$row['lname']}' data-email='{$row['email']}' data-phone_number='{$row['phone_number']}'>Edit</a></td></tr>";
 											
 											}

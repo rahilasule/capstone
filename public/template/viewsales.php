@@ -199,8 +199,8 @@ session_start(); //add session here to check that employee is logged in
 											include("../../application/models/sale.php");
 
 											$obj = new sale();
-											$obj->view_all_sales();
-											while($row=$obj->fetch()){
+											$data=$obj->view_all_sales();
+											while($row=$data->fetch_array(MYSQLI_ASSOC)){
 												echo "<tr><td>{$row['sale_id']}</td><td>{$row['cfname']} {$row['clname']}</td><td>{$row['efname']} {$row['elname']}</td><td>{$row['sale_total']}</td><td>{$row['amount_paid']}</td><td>{$row['sale_balance']}</td><td>{$row['date']}</td></tr>";
 											
 											}

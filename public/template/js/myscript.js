@@ -30,7 +30,7 @@ function getDetails() {
 
     url2 = "../../application/controllers/controller.php?cmd=2&id="+id+"&qty="+qty+"&sub="+isub;
     result1 = send_request(url2);
-    alert(result.result);
+    //alert(result.result);
 }
 
 function addRow(count,iname,iqty,iprice){

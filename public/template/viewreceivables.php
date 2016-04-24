@@ -167,8 +167,8 @@
 											include("../../application/models/sale.php");
 
 											$obj = new sale();
-											$obj->view_receivables();
-											while($row=$obj->fetch()){
+											$data=$obj->view_receivables();
+											while($row=$data->fetch_array(MYSQLI_ASSOC)){
 												echo "<tr><td>{$row['sale_id']}</td><td>{$row['customerName']}</td><td>{$row['date']}</td><td>{$row['amount_owed']}</td><td><a href='payment.php'>Make payment</a></td></tr>";
 											}
 										?>
